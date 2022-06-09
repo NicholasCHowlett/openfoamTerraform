@@ -4,10 +4,10 @@ This scaffold configuration file allows you to easily deploy reusable computatio
 
 ## Setup for deployments
 To be able to deploy CFD environments some prerequisites need to be completed, once-off:
-1. Install Terraform and initialise a directory. Then from that directory pull this repository.
-2. Setup Linode by creating an account then:
- - get your unique token.
- - install OpenFOAM on a Linode then create an Image from it. You may need to contact their support to allow you to create an Image sized larger than 6GB.
+1. Install [Terraform](https://www.terraform.io/downloads) and initialise a directory. Then from that directory pull this repository.
+2. Setup [Linode](https://www.linode.com/) by creating an account then:
+   - get your unique token.
+   - install [OpenFOAM](https://openfoam.org/download/) on a Linode then create an Image from it. You may need to contact their support to allow you to create an Image sized larger than 6GB.
 
 ## Scalable deployments
 Once the above has been completed, create individual directories that each represent a single computation instance. From each directory configure a `linode.tf` file, then initialise and deploy an instance of this configuration. The specific OpenFOAM case to be simulated needs to be within this directory.
